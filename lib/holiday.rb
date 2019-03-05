@@ -45,6 +45,7 @@ def all_winter_holiday_supplies(holiday_hash)
     puts "#{k}, #{v}"
     v.each {|value| winter_supplies << value}
   end
+  puts winter_supplies
   winter_supplies
 end
 
