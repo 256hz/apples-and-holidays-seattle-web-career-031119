@@ -73,7 +73,6 @@ def all_supplies_in_holidays(holiday_hash)
       else
         holiday_string = holiday.to_s.capitalize
       end
-      puts
       supplies_string = "  #{holiday_string}: "
       supplies_string += supplies_array.join(", ")
       puts supplies_string
