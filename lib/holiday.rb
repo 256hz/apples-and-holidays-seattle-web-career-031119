@@ -23,8 +23,11 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
 end
 
 def all_winter_holiday_supplies(holiday_hash)
-  holiday_hash[:winter]
-
+  winter_supplies = []
+  holiday_hash[:winter].each do |k, v|
+    v.each {|value| winter_supplies << value}
+  end
+  winter_supplies
 end
 
 def all_supplies_in_holidays(holiday_hash)
@@ -35,7 +38,10 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-
+  holiday_hash.each do |season|
+    puts "#{season.to_s.upcase}:"
+    season.each do |holiday, supplies_array|
+      puts "  #{holiday.to_s.upcase}:"
 end
 
 def all_holidays_with_bbq(holiday_hash)
