@@ -39,13 +39,13 @@ def add_new_holiday_with_supplies(holiday_hash, season, holiday_name, supply_arr
 end
 
 def all_winter_holiday_supplies(holiday_hash)
-  puts "all_winter_holiday_supplies"
+  #puts "all_winter_holiday_supplies"
   winter_supplies = []
   holiday_hash[:winter].each do |k, v|
-    puts "#{k}, #{v}"
+    #puts "#{k}, #{v}"
     v.each {|value| winter_supplies << value}
   end
-  puts winter_supplies
+  #puts winter_supplies
   winter_supplies
 end
 
