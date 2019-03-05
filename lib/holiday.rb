@@ -64,9 +64,11 @@ def all_supplies_in_holidays(holiday_hash)
     puts "#{season.to_s.capitalize}:"
     holiday_hash[season].each do |holiday, supplies_array|
       if holiday_array.size > 1
-        holiday_array = holiday.to_s.split("_")
+        holiday_string = holiday_array.to_s.split(" ")
+      else
+        holiday_string = holiday_string[0]
       end
-      holiday_string = holiday_array.join(" ")
+
       supplies_string = "  #{holiday_string.titleize}: "
       supplies_string += supplies_array.join(", ")
       puts supplies_string
